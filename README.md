@@ -25,11 +25,14 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 2. Ping with every machine<br>
 
 ```bash
-Ping 172.18.176.1<br>
+Ping 172.18.176.1
+
+
 ![Screenshot 2024-10-18 231352](https://github.com/user-attachments/assets/0dc2c509-a49c-4039-9fc5-abb9f0dea914)<br>
 
 ```bash
-Ping 192.168.64.133 <br>
+Ping 192.168.64.133
+
 ![Screenshot 2024-10-18 231345](https://github.com/user-attachments/assets/d79089b7-8869-4a2f-8ef1-c4792b1004b4) <br>
 
 
