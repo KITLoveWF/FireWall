@@ -55,7 +55,7 @@ ftp <ip addr>
 
 ![Screenshot 2024-10-18 234821](https://github.com/user-attachments/assets/2dcfb66e-28c7-4eb1-875d-b090594011dd)
 
-**5.Rukes Table**
+**5.Rules Table**
 
 ```bash
 sudo iptables -L
