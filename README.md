@@ -36,6 +36,12 @@ Ping 192.168.64.133
 ```
 ![Screenshot 2024-10-18 231345](https://github.com/user-attachments/assets/d79089b7-8869-4a2f-8ef1-c4792b1004b4) 
 
+```bash
+
+Ping 172.18.176.1
+```
+
+![Screenshot 2024-10-18 232449](https://github.com/user-attachments/assets/d227b98b-2511-41a2-acb5-a2c670b2b90c)
 
 
 
