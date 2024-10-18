@@ -43,6 +43,12 @@ Ping 172.18.176.1
 
 ![Screenshot 2024-10-18 232449](https://github.com/user-attachments/assets/d227b98b-2511-41a2-acb5-a2c670b2b90c)
 
+**3.Checking FTP is working**
+```bash
+ftp <ip addr>
+```
+![Screenshot 2024-10-18 234425](https://github.com/user-attachments/assets/589aee5c-6d3a-46c2-ae52-38cf5c804ff5)
+
 
 
 
