@@ -9,7 +9,7 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 3. Client 2 (Host): Windows 7 or 10
 ### Start processing the task
 #### Check Ipaddress every computer
-1. We can test it with ***ipconfig*** command with win 11 machine and ***ifconfig*** command with ubuntu server and ubuntu client <br><br>
+**1. We can test it with** *ipconfig* **command with win 11 machine and** *ifconfig* **command with ubuntu server and ubuntu client** <br><br>
 **SEEDUbuntu**<br>
 
 ![Screenshot 2024-10-18 230602](https://github.com/user-attachments/assets/3ba3210b-f0f2-4565-884c-1dc3d36bd8b9) <br>
@@ -22,7 +22,7 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 **Client Win 11**<br>
 ![Screenshot 2024-10-18 231033](https://github.com/user-attachments/assets/d71c94c1-1055-46fe-b205-cb0de4b308d3) <br>
                                   *Win 11 (172.18.176.1)* <br><br>
-2. Ping with every machine<br>
+**2. Ping with every machine**<br>
 
 ```bash
 Ping 172.18.176.1
