@@ -13,7 +13,7 @@ We can test it with ***ipconfig*** command with win 11 machine and ***ifconfig**
 **SEEDUbuntu**<br>
 
 ![Screenshot 2024-10-18 230602](https://github.com/user-attachments/assets/3ba3210b-f0f2-4565-884c-1dc3d36bd8b9) <br>
-                                <center> *SEED Ubuntu (192.168.64.133)* </center> <br><br>
+                                <center>*SEED Ubuntu (192.168.64.133)*</center> <br><br>
 
 **Client Ubuntu**<br>
 ![Screenshot 2024-10-18 231033](https://github.com/user-attachments/assets/09c8164b-125f-457b-a1da-3348f2314b0a) <br>
