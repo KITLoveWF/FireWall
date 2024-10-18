@@ -7,7 +7,7 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 1. Server (Guest): Ubuntu (SEEDUbuntu)
 2. Client 1 (Guest): Ubuntu (with scapy installed)
 3. Client 2 (Host): Windows 7 or 10
-### Start processing the task
+
 #### Check Ipaddress every computer
 **1. We can test it with** *ipconfig* **command with win 11 machine and** *ifconfig* **command with ubuntu server and ubuntu client** <br><br>
 **SEEDUbuntu**<br>
@@ -48,6 +48,23 @@ Ping 172.18.176.1
 ftp <ip addr>
 ```
 ![Screenshot 2024-10-18 234425](https://github.com/user-attachments/assets/589aee5c-6d3a-46c2-ae52-38cf5c804ff5)
+
+**4.Checking SSH service using PuTTY tool**
+
+![Screenshot 2024-10-18 234814](https://github.com/user-attachments/assets/a4b83b2a-46a2-43b7-ad4d-06d217a20000)
+
+![Screenshot 2024-10-18 234821](https://github.com/user-attachments/assets/2dcfb66e-28c7-4eb1-875d-b090594011dd)
+
+**5.Rukes Table**
+
+```bash
+sudo iptables -L
+```
+
+![Screenshot 2024-10-18 234729](https://github.com/user-attachments/assets/71730c2f-374a-47d1-b1ca-0ecafc6f33bd)
+
+
+### Start processing the task
 
 
 
