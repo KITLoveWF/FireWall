@@ -18,8 +18,7 @@ We can test it with ***ipconfig*** command with win 11 machine and ***ifconfig**
 **Client Ubuntu**<br>
 ![Screenshot 2024-10-18 231033](https://github.com/user-attachments/assets/09c8164b-125f-457b-a1da-3348f2314b0a) <br>
 
-                                *Ubuntu client (172.18.181.152)* <br><br>
-
+  *Ubuntu Client(172.18.181.152)* <br><br>
 **Client Win 11**<br>
 ![Screenshot 2024-10-18 231033](https://github.com/user-attachments/assets/d71c94c1-1055-46fe-b205-cb0de4b308d3) <br>
                                   *Win 11 (172.18.176.1)* <br><br>
