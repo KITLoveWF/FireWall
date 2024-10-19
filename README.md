@@ -64,7 +64,39 @@ sudo iptables -L
 ![Screenshot 2024-10-18 234729](https://github.com/user-attachments/assets/71730c2f-374a-47d1-b1ca-0ecafc6f33bd)
 
 
-### Start processing the task
+### Start processing the task <br>
+*1.Change the default policy to DROP all access to Ubuntu server*  <br>
+```bash
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+sudo iptables -P OUTPUT DROP
+```
+![Screenshot 2024-10-19 210339](https://github.com/user-attachments/assets/115f2f0b-eedf-4e82-9cea-e9ea384e320b)
+
+Check the result from either client machines (cannot ping, web access, ftp connect …)
+
+*1.1.ClientUbuntu ping SeedUbuntu*
+
+![Screenshot 2024-10-19 210452](https://github.com/user-attachments/assets/93774b38-f029-4e9b-ab23-e19d35c6c4eb)
+
+*1.2.Win 11 ping SeedUbuntu*
+
+![Screenshot 2024-10-19 210513](https://github.com/user-attachments/assets/878e8325-5106-4f7b-9731-d5577b23a439)
+
+*1.3.ClientUbuntu ping by ftp SeedUbuntu*
+
+```bash
+ftp 192.168.64.133
+```
+![Screenshot 2024-10-19 211158](https://github.com/user-attachments/assets/09c00cf9-f4e0-4188-8daa-acab8d0ed778)
+
+*1.4.Win 11 ping by ftp SeedUbuntu*
+
+```bash
+ftp 192.168.64.133
+```
+![Screenshot 2024-10-19 211203](https://github.com/user-attachments/assets/79516f98-42fe-4a30-8293-8846ae59445c)
+
 
 
 
