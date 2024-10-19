@@ -104,16 +104,46 @@ sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT ACCEPT
 ```
+![Screenshot 2024-10-19 234255](https://github.com/user-attachments/assets/21d018ef-9743-4062-bc02-9997233f40e2)
+
+![Screenshot 2024-10-19 234308](https://github.com/user-attachments/assets/c2c99f91-f278-4821-91c6-a398def129a3)
+
+
+
+
+Allow established connection
 
 ```bash
-sudo iptables -A INPUT -p tcp -s 172.18.176.1/24 --dport 21 -j ACCEPT
-sudo iptables -A INPUT -p tcp -s 172.18.176.1/24 --dport 80 -j ACCEPT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
+
+Allow Win11 to access web port 80 (HTTP) and ftp service port 21
+
+With ftp:
+```bash
+iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+iptables -A INPUT -p tcp --dport 30000:31000 -j ACCEPT
+```
+
+With web service:
+```bash
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+```
+
+
+
 Check the rules table we can see that Win11 now have access to Web and ftp service
 
 
-
 ![Screenshot 2024-10-19 212403](https://github.com/user-attachments/assets/8c0a5a24-6317-444b-9a98-92d10f0471b3)
+
+
+![Screenshot 2024-10-19 234600](https://github.com/user-attachments/assets/f22534d9-e5c0-4fec-a0cf-404f6bbb925f)
+
+
+
+
+
 
 
 
