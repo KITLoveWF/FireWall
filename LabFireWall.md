@@ -122,32 +122,44 @@ sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT ACCEPT
 ```
-![Screenshot 2024-10-19 234255](https://github.com/user-attachments/assets/21d018ef-9743-4062-bc02-9997233f40e2)
+### Ubuntu Client
 
-![Screenshot 2024-10-19 234308](https://github.com/user-attachments/assets/c2c99f91-f278-4821-91c6-a398def129a3)
-
-
+![image](https://github.com/user-attachments/assets/6328cde8-881b-4098-a0a6-689b03863f93)
 
 
+
+
+### Allow Ubuntu client to access web port 80 (HTTP) and ftp service port 21
 Allow established connection
-
 ```bash
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
-
-Allow Win11 to access web port 80 (HTTP) and ftp service port 21
 
 With ftp:
 ```bash
 iptables -A INPUT -p tcp --dport 21 -j ACCEPT
 iptables -A INPUT -p tcp --dport 30000:31000 -j ACCEPT
 ```
+![image](https://github.com/user-attachments/assets/8c8a6fcc-6ba3-4f5f-990e-2cfe27e8809e)
+
+### Win 11 same change
+![image](https://github.com/user-attachments/assets/4dc657f6-ebe5-42e4-a3fb-26480822879a)
+
+
+
+
 
 With web service:
 ```bash
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ```
+![image](https://github.com/user-attachments/assets/cfa7ec61-efb5-46c6-8d33-3bc492b1c3b6)
 
+**4.Allow ping from client 1 (Ubuntu Client) only**
+```
+sudo iptables -A INPUT -p icmp –icmp-type echo-request -s 192.168.64.130 -j DROP
+```
+![image](https://github.com/user-attachments/assets/2ea2f6ad-24ee-41f9-b311-42598635e05b)
 
 
 Check the rules table we can see that Win11 now have access to Web and ftp service
