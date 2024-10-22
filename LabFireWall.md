@@ -162,13 +162,6 @@ sudo iptables -A INPUT -p icmp –icmp-type echo-request -s 192.168.64.130 -j DR
 ![image](https://github.com/user-attachments/assets/2ea2f6ad-24ee-41f9-b311-42598635e05b)
 
 
-Check the rules table we can see that Win11 now have access to Web and ftp service
-
-
-![Screenshot 2024-10-19 212403](https://github.com/user-attachments/assets/8c0a5a24-6317-444b-9a98-92d10f0471b3)
-
-
-![Screenshot 2024-10-19 234600](https://github.com/user-attachments/assets/f22534d9-e5c0-4fec-a0cf-404f6bbb925f)
 
 
 
