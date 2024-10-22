@@ -10,44 +10,54 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 
 #### Check Ipaddress every computer
 **1. We can test it with** *ipconfig* **command with win 11 machine and** *ifconfig* **command with ubuntu server and ubuntu client** <br><br>
-**SEEDUbuntu**<br>
+**SEEDUbuntu (192.168.64.133)** <br>
 
 ![Screenshot 2024-10-18 230602](https://github.com/user-attachments/assets/3ba3210b-f0f2-4565-884c-1dc3d36bd8b9) <br>
-                               *SEED Ubuntu (192.168.64.133)* <br><br>
+                             
 
-**Client Ubuntu**<br>
-![Screenshot 2024-10-18 231033](https://github.com/user-attachments/assets/09c8164b-125f-457b-a1da-3348f2314b0a) <br>
+**Client Ubuntu(192.168.64.130)** 
+<br>
+![image](https://github.com/user-attachments/assets/06a1311e-86b0-4fe4-99d6-58003e82d95d)
+<br>
 
-  *Ubuntu Client(172.18.181.152)* <br><br>
-**Client Win 11**<br>
-![Screenshot 2024-10-18 231033](https://github.com/user-attachments/assets/d71c94c1-1055-46fe-b205-cb0de4b308d3) <br>
-                                  *Win 11 (172.18.176.1)* <br><br>
+ 
+**Client Win 11(192.168.64.1)**
+<br>
+![image](https://github.com/user-attachments/assets/989e4925-4973-4377-a4b7-fdf34b678efc)
+ <br>
 **2. Ping with every machine**<br>
-
-```bash
-Ping 172.18.176.1
+### SEEDUbuntu
+```
+Ping 192.168.64.130
 ```
 
+![image](https://github.com/user-attachments/assets/64fc591e-a63a-44f8-920c-5cc0f76e7ad6)
 
-![Screenshot 2024-10-18 231352](https://github.com/user-attachments/assets/0dc2c509-a49c-4039-9fc5-abb9f0dea914)
 
-```bash
+### Win 11
+```
 Ping 192.168.64.133
 ```
-![Screenshot 2024-10-18 231345](https://github.com/user-attachments/assets/d79089b7-8869-4a2f-8ef1-c4792b1004b4) 
-
-```bash
-
-Ping 172.18.176.1
+![image](https://github.com/user-attachments/assets/01e54d9b-4098-48a4-922c-e89cb94c08a6)
+ 
+### Ubuntu Client 
 ```
 
-![Screenshot 2024-10-18 232449](https://github.com/user-attachments/assets/d227b98b-2511-41a2-acb5-a2c670b2b90c)
+Ping 192.168.64.133
+```
+![image](https://github.com/user-attachments/assets/12435214-79a3-4f65-a633-1fcbf032618f)
+
 
 **3.Checking FTP is working**
 ```bash
 ftp <ip addr>
 ```
-![Screenshot 2024-10-18 234425](https://github.com/user-attachments/assets/589aee5c-6d3a-46c2-ae52-38cf5c804ff5)
+### Ubuntu Client
+![image](https://github.com/user-attachments/assets/c62b8c77-860f-4b3c-abc0-8ce085a1f08c)
+### SEEDUbuntu
+![image](https://github.com/user-attachments/assets/7eff609c-d27f-4212-a781-e11d0bbd1540)
+
+
 
 **4.Checking SSH service using PuTTY tool**
 
