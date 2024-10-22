@@ -86,23 +86,31 @@ sudo iptables -P OUTPUT DROP
 Check the result from either client machines (cannot ping, web access, ftp connect …)
 
 *1.1.ClientUbuntu ping SeedUbuntu*
+```
+ping 192.168.64.133
+```
 
-![Screenshot 2024-10-19 210452](https://github.com/user-attachments/assets/93774b38-f029-4e9b-ab23-e19d35c6c4eb)
+![image](https://github.com/user-attachments/assets/e22de540-d85d-4db3-825f-1dda04b94834)
+
 
 *1.2.Win 11 ping SeedUbuntu*
+```
+ping 192.168.64.133
+```
 
 ![Screenshot 2024-10-19 210513](https://github.com/user-attachments/assets/878e8325-5106-4f7b-9731-d5577b23a439)
 
 *1.3.ClientUbuntu ping by ftp SeedUbuntu*
 
-```bash
+```
 ftp 192.168.64.133
 ```
-![Screenshot 2024-10-19 211158](https://github.com/user-attachments/assets/09c00cf9-f4e0-4188-8daa-acab8d0ed778)
+![image](https://github.com/user-attachments/assets/1d6bd37c-e949-48b8-8b5c-7b1ed3e559e0)
+
 
 *1.4.Win 11 ping by ftp SeedUbuntu*
 
-```bash
+```
 ftp 192.168.64.133
 ```
 ![Screenshot 2024-10-19 211203](https://github.com/user-attachments/assets/79516f98-42fe-4a30-8293-8846ae59445c)
