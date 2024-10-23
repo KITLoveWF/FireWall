@@ -227,7 +227,7 @@ sudo iptables -A INPUT -p tcp -j DROP
 ```
 sudo iptables -F
 sudo iptables -P INPUT ACCEPT
-sudo iptables -A INPUT -p tcp -j DROP
+sudo iptables -A INPUT -p udp -j DROP
 ```
 
 
