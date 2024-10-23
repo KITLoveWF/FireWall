@@ -75,7 +75,8 @@ sudo iptables -L
 
 
 ### Start processing the task <br>
-**1.Change the default policy to DROP all access to Ubuntu server**  <br>
+#### 1.Change the default policy to DROP all access to Ubuntu server 
+<br>
 ```bash
 sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
@@ -115,21 +116,21 @@ ftp 192.168.64.133
 ```
 ![Screenshot 2024-10-19 211203](https://github.com/user-attachments/assets/79516f98-42fe-4a30-8293-8846ae59445c)
 
-**2.Enable web and ftp access only for both clients**
+#### 2.Enable web and ftp access only for both clients
 
 ```bash
 sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT ACCEPT
 ```
-### Ubuntu Client
+**Ubuntu Client**
 
 ![image](https://github.com/user-attachments/assets/6328cde8-881b-4098-a0a6-689b03863f93)
 
 
 
 
-### Allow Ubuntu client to access web port 80 (HTTP) and ftp service port 21
+**Allow Ubuntu client to access web port 80 (HTTP) and ftp service port 21**
 Allow established connection
 ```bash
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
@@ -142,7 +143,7 @@ iptables -A INPUT -p tcp --dport 30000:31000 -j ACCEPT
 ```
 ![image](https://github.com/user-attachments/assets/8c8a6fcc-6ba3-4f5f-990e-2cfe27e8809e)
 
-### Win 11 same change
+**Win 11 same change**
 ![image](https://github.com/user-attachments/assets/4dc657f6-ebe5-42e4-a3fb-26480822879a)
 
 
@@ -155,11 +156,87 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ```
 ![image](https://github.com/user-attachments/assets/cfa7ec61-efb5-46c6-8d33-3bc492b1c3b6)
 
-**4.Allow ping from client 1 (Ubuntu Client) only**
+#### 3.Allow ping from client 1 (Ubuntu Client) only
 ```
 sudo iptables -A INPUT -p icmp –icmp-type echo-request -s 192.168.64.130 -j DROP
 ```
 ![image](https://github.com/user-attachments/assets/2ea2f6ad-24ee-41f9-b311-42598635e05b)
+
+
+#### 4.Create a rule that allows SSH only from a specific IP address
+From the Seed Server machine, using this while keeping the default INPUT policy at ACCEPT will ensure that all the other services(web, ftp ...) are still available for other users.
+
+```
+sudo iptables -A INPUT -p tcp -s 192.168.64.130 --dport 22 -j ACCEPT
+```
+![image](https://github.com/user-attachments/assets/55e632eb-d0eb-4ec5-a1ca-39d221a2ea3e)
+
+Client Ubuntu, use the command ssh <user>@<server-ip> to verify that the specified client is still able to call ssh service. 
+
+```
+ssh seed@192.168.64.133
+```
+
+![image](https://github.com/user-attachments/assets/56c2b5ed-a5f7-419d-a58e-6349ab31014d)
+
+While on the Win client 
+```
+ssh seed@192.168.64.133
+```
+![image](https://github.com/user-attachments/assets/fbd2f72c-234c-47ca-b2bb-48428f5c8554)
+**Note: Pay attention to the order in which you input the cmd because the iptbales check the rule which the policy first to match and will drop the rest.**
+
+#### 5.Create the rules that block any HTTP and HTTPS browsing
+On the seed server. use these command to block both in or out web service both http at port 80 and https at port 443, after input use:
+```
+sudo iptables -A OUTPUT -p tcp  --dport 80 -j DROP
+sudo iptables -A INPUT -p tcp  --dport 80 -j DROP
+sudo iptables -A OUTPUT -p tcp  --dport 443 -j DROP
+sudo iptables -A INPUT -p tcp  --dport 443 -j DROP
+
+```
+Check in IPTables
+```
+sudo iptables -L -n -v 
+```
+Ubuntu Client
+![image](https://github.com/user-attachments/assets/a8fe846b-90a5-4d8a-92ee-ee4fc0fab5ce)
+
+SEEFUbuntu
+![image](https://github.com/user-attachments/assets/c480d243-f161-4201-863b-f075cd39a354)
+
+Also on the server the traffic is blocked.
+
+#### 6.Create the rules that block any HTTP and HTTPS browsing
+Seed Server, change to default INPUT policy to prevent any connection then add a rule to allow only access via ssh service.
+```
+sudo iptables -P INPUT DROP
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT 
+```
+![image](https://github.com/user-attachments/assets/097a4ea9-22c6-4275-8beb-320ae253e0aa)
+
+#### 7.Block all incoming TCP traffic. Validate this rule by sending a packet from scapy. 
+```
+sudo iptables -F
+sudo iptables -P INPUT ACCEPT
+sudo iptables -A INPUT -p tcp -j DROP
+```
+![image](https://github.com/user-attachments/assets/2fe022da-7ebf-43df-9b6f-5a8d2b9651ab)
+#### 8.Block all incoming UDP traffic. Validate this rule by sending packet from scapy.
+
+```
+sudo iptables -F
+sudo iptables -P INPUT ACCEPT
+sudo iptables -A INPUT -p tcp -j DROP
+```
+
+
+
+
+
+
+
+
 
 
 
