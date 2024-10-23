@@ -227,8 +227,17 @@ sudo iptables -A INPUT -p tcp -j DROP
 ```
 sudo iptables -F
 sudo iptables -P INPUT ACCEPT
-sudo iptables -A INPUT -p udp -j DROP
+sudo iptables -A INPUT -p udp -dport 0:65535 -j DROP
 ```
+Ubuntu Client
+![image](https://github.com/user-attachments/assets/bde3802b-0743-4ea1-bffa-7c0acef3887c)
+
+```
+sudo tcpdump -i any udp
+```
+![image](https://github.com/user-attachments/assets/c5934469-61a1-42ef-8512-2832445334ec)
+
+
 
 
 
