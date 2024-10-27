@@ -77,10 +77,12 @@ sudo iptables -L
 ### Start processing the task <br>
 #### 1.Change the default policy to DROP all access to Ubuntu server 
 <br>
-```bash
+```
+
 sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT DROP
+
 ```
 
 ![Screenshot 2024-10-19 210339](https://github.com/user-attachments/assets/115f2f0b-eedf-4e82-9cea-e9ea384e320b)
