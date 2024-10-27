@@ -142,7 +142,7 @@ iptables -A INPUT -p tcp --dport 30000:31000 -j ACCEPT
 ```
 ![image](https://github.com/user-attachments/assets/8c8a6fcc-6ba3-4f5f-990e-2cfe27e8809e)
 
-**Win 11 same change**
+Win 11 same change
 ![image](https://github.com/user-attachments/assets/4dc657f6-ebe5-42e4-a3fb-26480822879a)
 
 
