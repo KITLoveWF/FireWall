@@ -140,7 +140,8 @@ With ftp:
 iptables -A INPUT -p tcp --dport 21 -j ACCEPT
 iptables -A INPUT -p tcp --dport 30000:31000 -j ACCEPT
 ```
-![image](https://github.com/user-attachments/assets/8c8a6fcc-6ba3-4f5f-990e-2cfe27e8809e)
+
+![image](https://github.com/user-attachments/assets/cfa7ec61-efb5-46c6-8d33-3bc492b1c3b6)
 
 Win 11 same change
 ![image](https://github.com/user-attachments/assets/4dc657f6-ebe5-42e4-a3fb-26480822879a)
@@ -153,8 +154,8 @@ With web service:
 ```bash
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ```
-![image](https://github.com/user-attachments/assets/cfa7ec61-efb5-46c6-8d33-3bc492b1c3b6)
 
+![image](https://github.com/user-attachments/assets/8c8a6fcc-6ba3-4f5f-990e-2cfe27e8809e)
 #### 3.Allow ping from client 1 (Ubuntu Client) only
 ```
 sudo iptables -A INPUT -p icmp –icmp-type echo-request -s 192.168.64.130 -j DROP
