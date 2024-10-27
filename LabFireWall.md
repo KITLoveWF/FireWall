@@ -17,12 +17,14 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 
 ### Client Ubuntu(192.168.64.130)** 
 <br>
+
 ![image](https://github.com/user-attachments/assets/06a1311e-86b0-4fe4-99d6-58003e82d95d)
 <br>
 
  
 ### Client Win 11(192.168.64.1)**
 <br>
+
 ![image](https://github.com/user-attachments/assets/989e4925-4973-4377-a4b7-fdf34b678efc)
  <br>
 **2. Ping with every machine**<br>
@@ -76,15 +78,12 @@ sudo iptables -L
 
 ### Start processing the task <br>
 #### 1.Change the default policy to DROP all access to Ubuntu server 
-<br>
 ```
 
 sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT DROP
-
 ```
-
 ![Screenshot 2024-10-19 210339](https://github.com/user-attachments/assets/115f2f0b-eedf-4e82-9cea-e9ea384e320b)
 
 Check the result from either client machines (cannot ping, web access, ftp connect …)
@@ -93,15 +92,12 @@ Check the result from either client machines (cannot ping, web access, ftp conne
 ```
 ping 192.168.64.133
 ```
-
 ![image](https://github.com/user-attachments/assets/e22de540-d85d-4db3-825f-1dda04b94834)
-
 
 *1.2.Win 11 ping SeedUbuntu*
 ```
 ping 192.168.64.133
 ```
-
 ![Screenshot 2024-10-19 210513](https://github.com/user-attachments/assets/878e8325-5106-4f7b-9731-d5577b23a439)
 
 *1.3.ClientUbuntu ping by ftp SeedUbuntu*
