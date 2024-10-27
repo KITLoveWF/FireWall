@@ -82,6 +82,7 @@ sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT DROP
 ```
+
 ![Screenshot 2024-10-19 210339](https://github.com/user-attachments/assets/115f2f0b-eedf-4e82-9cea-e9ea384e320b)
 
 Check the result from either client machines (cannot ping, web access, ftp connect …)
