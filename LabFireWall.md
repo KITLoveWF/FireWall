@@ -15,14 +15,14 @@ For this lab, each student will need two (2) clients and one (1) server. We will
 ![Screenshot 2024-10-18 230602](https://github.com/user-attachments/assets/3ba3210b-f0f2-4565-884c-1dc3d36bd8b9) <br>
                              
 
-### Client Ubuntu(192.168.64.130)** 
+### Client Ubuntu(192.168.64.130)
 <br>
 
 ![image](https://github.com/user-attachments/assets/06a1311e-86b0-4fe4-99d6-58003e82d95d)
 <br>
 
  
-### Client Win 11(192.168.64.1)**
+### Client Win 11(192.168.64.1)
 <br>
 
 ![image](https://github.com/user-attachments/assets/989e4925-4973-4377-a4b7-fdf34b678efc)
