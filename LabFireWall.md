@@ -207,7 +207,7 @@ SEEFUbuntu
 
 Also on the server the traffic is blocked.
 
-#### 6.Create the rules that block any HTTP and HTTPS browsing
+#### 6.Allow only incoming SSH connections
 Seed Server, change to default INPUT policy to prevent any connection then add a rule to allow only access via ssh service.
 ```
 sudo iptables -P INPUT DROP
