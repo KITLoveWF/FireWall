@@ -129,7 +129,7 @@ sudo iptables -P OUTPUT ACCEPT
 
 
 
-**Allow Ubuntu client to access web port 80 (HTTP) and ftp service port 21**
+**Allow Ubuntu client to access web port 80 (HTTP) and ftp service port 21**<br>
 Allow established connection
 ```bash
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
